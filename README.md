@@ -146,34 +146,5 @@ You can click `Analyze` on multiple posts; each post keeps its own result panel.
 }
 ```
 
-## Troubleshooting
 
-- **Analyze button appears but no result**
-  - Check backend is running on `127.0.0.1:3001`
-  - Open extension service worker logs in `chrome://extensions`
-  - Verify `/analyze` returns success JSON
 
-- **`Cannot read properties of undefined (reading 'sendMessage')`**
-  - Reload extension and Reddit tab
-  - Ensure extension is enabled and host permissions are present
-
-- **`No structured fields returned`**
-  - Usually means backend response shape mismatch
-  - Confirm backend returns fields inside `data`
-
-- **CORS/network issues**
-  - Ensure backend is local and reachable
-  - Confirm `extension/manifest.json` includes `http://127.0.0.1/*` in `host_permissions`
-
-## Current Notes
-
-- Reddit DOM changes can affect button injection placement.
-- The extension is currently targeted at `www.reddit.com`.
-- Results are session-DOM based inline; they clear on full page reload.
-
----
-
-If you want, I can also add:
-- a short GIF/screenshots section,
-- a one-command run script for backend,
-- and a `.env.example` file.
