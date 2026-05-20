@@ -1,4 +1,4 @@
-# Opinion Intelligence System
+# Thread Lens
 
 A Chrome extension + FastAPI backend that analyzes Reddit threads and surfaces structured opinion insights directly on the Reddit page.
 
